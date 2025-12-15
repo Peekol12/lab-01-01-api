@@ -1,0 +1,570 @@
+[
+    {
+        "id": "b5c285a494a96deb",
+        "type": "tab",
+        "label": "Calculator",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a62c8fcb0a891b81",
+        "type": "http in",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "url": "/calculator/add",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 230,
+        "y": 240,
+        "wires": [
+            [
+                "a7094b4e413758c4",
+                "e80ca3a5d7c152aa"
+            ]
+        ]
+    },
+    {
+        "id": "3ad3c9860eb3b1af",
+        "type": "http in",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "url": "/calculator/subtract",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 240,
+        "y": 300,
+        "wires": [
+            [
+                "2d22edf3f55f7447"
+            ]
+        ]
+    },
+    {
+        "id": "92dc6ce5a4b9f81e",
+        "type": "http in",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "url": "/calculator/multiply",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 240,
+        "y": 360,
+        "wires": [
+            [
+                "88640a37bafeb806"
+            ]
+        ]
+    },
+    {
+        "id": "9ebc3014755b85b9",
+        "type": "http in",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "url": "/calculator/divide",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 240,
+        "y": 420,
+        "wires": [
+            [
+                "cb59a3a59bf65f6e"
+            ]
+        ]
+    },
+    {
+        "id": "a7094b4e413758c4",
+        "type": "change",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(payload.a) + $number(payload.b)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 240,
+        "wires": [
+            [
+                "c2f14952df6986f6"
+            ]
+        ]
+    },
+    {
+        "id": "2d22edf3f55f7447",
+        "type": "change",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(payload.a) - $number(payload.b)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 300,
+        "wires": [
+            [
+                "eb78734b55ef2650"
+            ]
+        ]
+    },
+    {
+        "id": "88640a37bafeb806",
+        "type": "change",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(payload.a) * $number(payload.b)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 360,
+        "wires": [
+            [
+                "714d8a722722c383"
+            ]
+        ]
+    },
+    {
+        "id": "91d5c91463e89683",
+        "type": "change",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(payload.a) / $number(payload.b)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 420,
+        "wires": [
+            [
+                "baf2a4c6c8107d40"
+            ]
+        ]
+    },
+    {
+        "id": "c2f14952df6986f6",
+        "type": "http response",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1030,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "eb78734b55ef2650",
+        "type": "http response",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1030,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "714d8a722722c383",
+        "type": "http response",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1030,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "baf2a4c6c8107d40",
+        "type": "http response",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1030,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "879a0d170e7f0958",
+        "type": "change",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Не делиться на ноль",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 500,
+        "wires": [
+            [
+                "baf2a4c6c8107d40"
+            ]
+        ]
+    },
+    {
+        "id": "cb59a3a59bf65f6e",
+        "type": "switch",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 460,
+        "wires": [
+            [
+                "91d5c91463e89683"
+            ],
+            [
+                "879a0d170e7f0958"
+            ]
+        ]
+    },
+    {
+        "id": "e80ca3a5d7c152aa",
+        "type": "debug",
+        "z": "b5c285a494a96deb",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "89ca032894be1210",
+        "type": "http in",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "url": "/calculator/sin",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 270,
+        "y": 600,
+        "wires": [
+            [
+                "ed89e3f535692760"
+            ]
+        ]
+    },
+    {
+        "id": "f6d15e48fbee437a",
+        "type": "http in",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "url": "/calculator/cos",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 270,
+        "y": 660,
+        "wires": [
+            [
+                "6e242ed20433e1eb"
+            ]
+        ]
+    },
+    {
+        "id": "5b2b31a7810a1244",
+        "type": "http in",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "url": "/calculator/tan",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 270,
+        "y": 720,
+        "wires": [
+            [
+                "e987ad8a142ccb4f"
+            ]
+        ]
+    },
+    {
+        "id": "2154f2a80b20e830",
+        "type": "http in",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "url": "/calculator/sqrt",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 270,
+        "y": 800,
+        "wires": [
+            [
+                "e21861ce3762f832"
+            ]
+        ]
+    },
+    {
+        "id": "a88b180478a68e73",
+        "type": "change",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$sqrt($number(msg.req.query.a))",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 800,
+        "wires": [
+            [
+                "ab47ccd329fec19e"
+            ]
+        ]
+    },
+    {
+        "id": "73bf3ac58cd579c0",
+        "type": "change",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "на ноль не делится",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 880,
+        "wires": [
+            [
+                "ab47ccd329fec19e"
+            ]
+        ]
+    },
+    {
+        "id": "e21861ce3762f832",
+        "type": "switch",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 490,
+        "y": 840,
+        "wires": [
+            [
+                "a88b180478a68e73"
+            ],
+            [
+                "73bf3ac58cd579c0"
+            ]
+        ]
+    },
+    {
+        "id": "06c03b398d297593",
+        "type": "http response",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1030,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "a80c9deb2d11065f",
+        "type": "http response",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1030,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "341efdd9c563a4e1",
+        "type": "http response",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1030,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "ab47ccd329fec19e",
+        "type": "http response",
+        "z": "b5c285a494a96deb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1030,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "ed89e3f535692760",
+        "type": "function",
+        "z": "b5c285a494a96deb",
+        "name": "function 1",
+        "func": "let a = Number(msg.req.query.a);\nmsg.payload = Math.sin(a * Math.PI / 180);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 600,
+        "wires": [
+            [
+                "06c03b398d297593"
+            ]
+        ]
+    },
+    {
+        "id": "6e242ed20433e1eb",
+        "type": "function",
+        "z": "b5c285a494a96deb",
+        "name": "function 2",
+        "func": "let a = Number(msg.req.query.a);\nmsg.payload = Math.cos(a * Math.PI / 180);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 660,
+        "wires": [
+            [
+                "a80c9deb2d11065f"
+            ]
+        ]
+    },
+    {
+        "id": "e987ad8a142ccb4f",
+        "type": "function",
+        "z": "b5c285a494a96deb",
+        "name": "function 3",
+        "func": "let a = Number(msg.req.query.a);\nmsg.payload = Math.tan(a * Math.PI / 180);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 720,
+        "wires": [
+            [
+                "341efdd9c563a4e1"
+            ]
+        ]
+    }
+]
